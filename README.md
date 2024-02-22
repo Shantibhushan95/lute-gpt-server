@@ -1,5 +1,5 @@
 # lute-gpt-server
-A python server to make chatGPT as a dictionary in Lute (language learning software)
+A python server to make ChatGPT as a dictionary in Lute (language learning software)
 
 Instructions:
 
