@@ -3,9 +3,7 @@ import socketserver
 import urllib.parse
 import requests
 import json
-import sys
 import argparse
-
 
 class CurlRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
@@ -20,11 +18,10 @@ class CurlRequestHandler(http.server.BaseHTTPRequestHandler):
 
         print(language)
         print(phrase)
-
-        # Determine theme color based on the argument passed
-        if theme.lower() == "dark":
+        
+        if args.theme and args.theme.lower() == "dark":
             theme_color = "white"
-        elif theme.lower() == "light":
+        elif args.theme and args.theme.lower() == "light":
             theme_color = "black"
         else:
             theme_color = "red"
@@ -61,8 +58,11 @@ parser.add_argument("--theme", help="Set the theme for the server")
 args = parser.parse_args()
 
 
-
 PORT = 8000
 httpd = socketserver.TCPServer(("", PORT), CurlRequestHandler)
 print(f"Serving at http://localhost:{PORT}")
-httpd.serve_forever()
+try:
+    httpd.serve_forever()
+except KeyboardInterrupt:
+    print("Server shutting down...")
+    httpd.shutdown()
