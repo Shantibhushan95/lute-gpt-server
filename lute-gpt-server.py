@@ -8,10 +8,11 @@ class CurlRequestHandler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
         # Extract payload from the query string
         language=""
-        payload=""
+        phrase=""
         query_string = urllib.parse.urlparse(self.path).query
+        payload = urllib.parse.parse_qs(query_string).get('payload', [None])[0]
         if query_string:
-            payload,language = query_string.split('|')
+            phrase,language = payload.split('|')
 
         # Construct headers and payload for the curl request
         headers = {
@@ -22,7 +23,7 @@ class CurlRequestHandler(http.server.BaseHTTPRequestHandler):
         "model": "gpt-3.5-turbo",
             "messages": [
                 {"role": "system", "content": f"You are an experienced {language} language teacher in an English speaking land, explain the prompted {language} word or phrase with apt meanings and added example usages. Treat chinese characters in japanese words as japanese Kanji. Also state other relevant grammatical information if applicable and if it is a conjugation of some word, list all its conjugations. Provide your response as a nicely formatted HTML code with emphases, utf-8 support and the text color should respect the time of day for GMT (white for night, dark-grey for day) with no background color. I stress again, do not forget utf-8 support."},
-                {"role": "user", "content": payload}
+                {"role": "user", "content": phrase}
             ],
             "seed":123,
             "temperature":0
