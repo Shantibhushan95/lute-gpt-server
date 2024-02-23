@@ -10,7 +10,9 @@ Edit the file and add your personal OpenAI API token at the place indicated in c
 Edit the prompt content and model to your liking BUT keep the last part about HTML formatting as it is (unless you know what you are doing).
 Also replace GMT with your region time.
 
-Run the server with `python lute-gpt-server.py --theme light` Themes `light` and `dark` just reverse the text color.
+Run the server with `python lute-gpt-server.py --theme light` 
+
+Themes `light` and `dark` just reverse the text color.
 
 Within Lute language settings add a new dictionary with the options Terms and Embedded and the url: `http://localhost:8000/?payload=###|language` and save.
 For example for German `http://localhost:8000/?payload=###|german`
