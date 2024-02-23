@@ -8,7 +8,6 @@ Add the lute-gpt-server.py file into the root of your Lute folder (or anywhere e
 Edit the file and add your personal OpenAI API token at the place indicated in code (You may find resources elsewhere about how to obtain the token).
 
 Edit the prompt content and model to your liking BUT keep the last part about HTML formatting as it is (unless you know what you are doing).
-Also replace GMT with your region time.
 
 Run the server with `python lute-gpt-server.py --theme light` 
 
