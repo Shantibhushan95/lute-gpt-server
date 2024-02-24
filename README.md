@@ -9,7 +9,7 @@ Instructions:
 
 Add the lute-gpt-server.py and requirements.txt files into the root of your Lute folder (or anywhere else).
 
-Edit the lute-gpt-server.py file and add your personal OpenAI API token at the place indicated in code (You may find resources elsewhere about how to obtain the token).
+Edit the lute-gpt-server.py file and add your personal OpenAI API token at the place indicated in code (You may find resources elsewhere about how to obtain the token, and a new token must be created after plan upgrade).
 
 Edit the prompt content and ChatGPT model to your liking BUT keep the last part about HTML formatting as it is (unless you know what you are doing).
 
