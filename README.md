@@ -1,7 +1,9 @@
 # lute-gpt-server
-A python server to make ChatGPT as a dictionary in Lute (language learning software)
+A python server to make ChatGPT as a dictionary in Lute (language learning software) through OpenAI API
 
 Disclaimer: OpenAI API has a free tier, but will require paid access for greater limit usage. (Tier 1 requires USD $5) Refer https://platform.openai.com/docs/guides/rate-limits/usage-tiers
+
+First try something in Playground -> Chat to check if everything's working alright.
 
 Instructions:
 
