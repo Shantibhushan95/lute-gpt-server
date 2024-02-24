@@ -45,12 +45,24 @@ class CurlRequestHandler(http.server.BaseHTTPRequestHandler):
         curl_response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=newpayload)
         json_response=json.loads(curl_response.text)
 
+        if "error" in json_response:
+            error_message = json_response["error"]
+            response_content = f"Error: {error_message}"
+        else:
+            if "choices" in json_response:
+                choices = json_response["choices"]
+                if choices:
+                    response_content = choices[0]["message"]["content"]
+                else:
+                    response_content = "No content."
+            else:
+                response_content = "No content."
+
         # Send the curl response as HTML text
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
         self.end_headers()
-        self.wfile.write(json_response["choices"][0]["message"]["content"].encode('utf-8'))
-
+        self.wfile.write(response_content.encode('utf-8'))
 
 
 parser = argparse.ArgumentParser()
