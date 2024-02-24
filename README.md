@@ -1,17 +1,17 @@
 # lute-gpt-server
 A python server to make ChatGPT as a dictionary in Lute (language learning software)
 
-Disclaimer: OpenAI API has a free tier, but will require paid access for greater limit usage. (Tier 1 requires USD $5)
+Disclaimer: OpenAI API has a free tier, but will require paid access for greater limit usage. (Tier 1 requires USD $5) Refer https://platform.openai.com/docs/guides/rate-limits/usage-tiers
 
 Instructions:
 
-Add the lute-gpt-server.py file into the root of your Lute folder (or anywhere else).
+Add the lute-gpt-server.py and requirements.txt files into the root of your Lute folder (or anywhere else).
 
-Edit the file and add your personal OpenAI API token at the place indicated in code (You may find resources elsewhere about how to obtain the token).
+Edit the lute-gpt-server.py file and add your personal OpenAI API token at the place indicated in code (You may find resources elsewhere about how to obtain the token).
 
 Edit the prompt content and ChatGPT model to your liking BUT keep the last part about HTML formatting as it is (unless you know what you are doing).
 
-Open a new terminal/cmd tab.
+Open a new terminal/cmd tab at the script's location.
 
 First install dependencies with `pip install -r requirements.txt`
 
