@@ -1,23 +1,29 @@
 # lute-gpt-server
-A python server to make ChatGPT as a dictionary in Lute (language learning software) through OpenAI API
+A python server to make either ChatGPT or Ai21Studio as a dictionary in Lute (language learning software) through their API
 
-Disclaimer: OpenAI API has a free tier, but will require paid access for greater limit usage. (Tier 1 requires USD $5) Refer https://platform.openai.com/docs/guides/rate-limits/usage-tiers
+Disclaimer: OpenAI API has a free tier, but will require paid access for greater limit usage. (Tier 1 requires USD $5) Refer https://platform.openai.com/docs/guides/rate-limits/usage-tiers 
 
-First try something in Playground -> Chat to check if everything's working alright.
+AI21Studio (https://studio.ai21.com) has 3 months free usage with $90 USD free initial credit and no card requirement.
 
-Instructions:
+For OpenAI, First try something in Playground -> Chat to check if everything's working alright.
+
+
+
+### Instructions:
 
 Add the lute-gpt-server.py and requirements.txt files into the root of your Lute folder (or anywhere else).
 
-Edit the lute-gpt-server.py file and add your personal OpenAI API token at the place indicated in code (You may find resources elsewhere about how to obtain the token, and a new token must be created after plan upgrade).
+Edit the lute-gpt-server.py file to add your personal API tokens at the place indicated in code (you may find resources elsewhere about how to obtain the token, and a new token must be created after plan upgrade).
 
-Edit the prompt content and ChatGPT model to your liking BUT keep the last part about HTML formatting as it is (unless you know what you are doing).
+Edit the prompt content and LLM model to your liking BUT keep the part about HTML formatting as it is (unless you know what you are doing).
 
 Open a new terminal/cmd tab at the script's location.
 
 First install dependencies with `pip install -r requirements.txt`
 
-Then run the server with `python lute-gpt-server.py --theme light` 
+Then run the server with `python lute-gpt-server.py --theme light --service openai`
+
+For `--service` use either openai or ai21 
 
 Themes `light` and `dark` just reverse the text color.
 
