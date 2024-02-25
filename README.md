@@ -17,9 +17,13 @@ Edit the lute-gpt-server.py file to add your personal API tokens at the place in
 
 Edit the prompt content and LLM model to your liking BUT keep the part about HTML formatting as it is (unless you know what you are doing).
 
-Open a new terminal/cmd tab at the script's location.
+Open a new terminal/cmd tab at the script's location, and run the following:
 
-First install dependencies with `pip install -r requirements.txt`
+`python -m venv myenv`
+
+`source myenv/bin/activate`
+
+`pip install -r requirements.txt`
 
 Then run the server with `python lute-gpt-server.py --theme light --service openai`
 
