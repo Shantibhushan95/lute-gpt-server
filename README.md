@@ -11,7 +11,7 @@ For OpenAI, First try something in Playground -> Chat to check if everything's w
 
 ### Instructions:
 
-Add the lute-gpt-server.py and requirements.txt files into the root of your Lute folder (or anywhere else).
+Download the folder.
 
 Edit the lute-gpt-server.py file to add your personal API tokens at the place indicated in code (you may find resources elsewhere about how to obtain the token, and a new token must be created after plan upgrade).
 
