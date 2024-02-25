@@ -1,4 +1,2 @@
-urllib.parse
 requests
-json
 argparse
