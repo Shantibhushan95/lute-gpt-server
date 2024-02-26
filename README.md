@@ -19,11 +19,11 @@ For OpenAI, First try something in Playground -> Chat to check if everything's w
 
 - Open a new terminal/cmd tab at the script's location, and run the following:
 
-  - `python -m venv myenv`
+  - `python -m venv myenv` (only once during install)
 
-  - `source myenv/bin/activate`
+  - `source myenv/bin/activate` (every time)
 
-  - `pip install -r requirements.txt`
+  - `pip install -r requirements.txt` (only once during install)
 
 - Then run the server with `python lute-gpt-server.py --theme light --service openai`
 
