@@ -1,5 +1,5 @@
 # lute-gpt-server
-A python server to make either ChatGPT or Ai21Studio as a dictionary in Lute (language learning software) through their API
+A python server to make either ChatGPT or Ai21Studio as a dictionary in Lute (language learning software https://github.com/LuteOrg/lute-v3 ) through their API
 
 Disclaimer: OpenAI API has a free tier, but will require paid access for greater limit usage. (Tier 1 requires USD $5) Refer https://platform.openai.com/docs/guides/rate-limits/usage-tiers 
 
